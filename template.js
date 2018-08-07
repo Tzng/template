@@ -9,8 +9,8 @@ export default {{ template }} = props => {
   </div>
 }
 
-{ { template } }.defaultProps = {
+{{template}}.defaultProps = {
 };
 
-{ { template } }.propTypes = {
+{{template}}.propTypes = {
 };
