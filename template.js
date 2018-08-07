@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './{{template}}.styl';
 
-class {{template}} extends React.Component {
+export default class {{template}} extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -37,5 +37,3 @@ class {{template}} extends React.Component {
     );
   }
 }
-
-export default {{template}};
