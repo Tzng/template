@@ -1,1 +1,1 @@
-let arr="{{name}}"
+module.exports = require('./{{template}}');
