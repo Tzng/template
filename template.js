@@ -5,7 +5,7 @@ import './{{template}}.styl';
 
 export default {{ template }} = props => {
   return <div className="{{template}}">
-
+        {{template}}
   </div>
 }
 
