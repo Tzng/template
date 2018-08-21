@@ -6,7 +6,7 @@ interface Props {
 }
 
 
-export default {{ template }} = (props:Props) => {
+export default  (props:Props) => {
   return <div className="{{template}}">
         {{template}}
   </div>
