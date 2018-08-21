@@ -1,1 +1,1 @@
-module.exports = require('./{{template}}');
+export { default } from "./{{template}}";

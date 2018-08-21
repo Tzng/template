@@ -37,3 +37,13 @@ export default class {{template}} extends React.Component {
     );
   }
 }
+
+{{template}}.propTypes={
+
+}
+
+{{template}}.defaultProps={
+  
+}
+
+
