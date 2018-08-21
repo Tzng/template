@@ -39,7 +39,7 @@ export default withRouter<any>(
     render() {
       return (
         <div className="{{template}}">
-
+            {{template}}
         </div>
       );
     }
