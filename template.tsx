@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './{{template}}.styl';
+import './{{template}}.less';
 
 import { withRouter } from 'react-router-dom'
 
