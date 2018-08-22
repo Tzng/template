@@ -2,8 +2,6 @@ import * as React from 'react';
 import './{{template}}.less';
 
 import { withRouter } from 'react-router-dom'
-
-
 interface Props {
 
 }
