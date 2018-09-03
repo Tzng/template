@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './{{template}}.styl';
 
-export default {{ template }} = props => {
+const {{ template }} = props => {
   return <div className="{{template}}">
         {{template}}
   </div>
@@ -13,3 +13,5 @@ export default {{ template }} = props => {
 
 {{template}}.propTypes = {
 };
+
+export default {{ template }}
