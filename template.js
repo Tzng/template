@@ -12,22 +12,35 @@ import {withRouter} from 'react-router-dom'
       
     };
   }
-
-  componentWillMount() {
-
+  static getDerivedStateFromProps(nextProps, prevState){
+    if (nextProps.currentRow !== prevState.lastRow) {
+      return {
+          isScrollingDown:
+          nextProps.currentRow > prevState.lastRow,
+          lastRow: nextProps.currentRow
+      }
   }
+  return null
+  }
+
 
   componentDidMount() { }
 
-  componentWillReceiveProps(nextProps) { }
 
   shouldComponentUpdate(nextProps, nextState) {
     return true;
   }
+  // 记忆上一次
+  getSnapshotBeforeUpdate(prevProps, prevState) {
+    // 如果 `props.list` 增加，将原来的 scrollHeight 存入 listRef
+    if (prevProps.list.length < this.props.list.length) {
+        return this.listRef.scrollHeight
+    }
+    return null
+} 
+// snapshot 快照
 
-  componentWillUpdate(nextProps, nextState) { }
-
-  componentDidUpdate(prevProps, prevState) { }
+  componentDidUpdate(prevProps, prevState,snapshot) { }
 
   componentWillUnmount() { }
 
