@@ -5,9 +5,12 @@ import { withRouter } from 'react-router-dom'
 interface Props {
 
 }
+interface State {
+
+}
 
 export default withRouter<any>(
-  class {{ template }} extends React.Component < Props, {} > {
+  class {{ template }} extends React.Component < Props, State > {
     constructor(props: Props) {
       super(props);
       this.state = {
@@ -15,21 +18,29 @@ export default withRouter<any>(
       };
     }
   
-    componentWillMount() {
+    static getDerivedStateFromProps(nextProps: object, prevState: object) {
 
+      return null
     }
+  
   
     componentDidMount() { }
   
-    componentWillReceiveProps(nextProps) { }
   
     shouldComponentUpdate(nextProps, nextState) {
       return true;
     }
+    // 记忆上一次
+    getSnapshotBeforeUpdate(prevProps, prevState) {
+      // 如果 `props.list` 增加，将原来的 scrollHeight 存入 listRef
+      if (prevProps.list.length < this.props.list.length) {
+        return this.listRef.scrollHeight
+      }
+      return null
+    }
+  // snapshot 快照
   
-    componentWillUpdate(nextProps, nextState) { }
-  
-    componentDidUpdate(prevProps, prevState) { }
+    componentDidUpdate(prevProps, prevState, snapshot) { }
   
     componentWillUnmount() { }
   
@@ -37,7 +48,7 @@ export default withRouter<any>(
     render() {
       return (
         <div className="{{template}}">
-            {{template}}
+          {{ template }}
         </div>
       );
     }
