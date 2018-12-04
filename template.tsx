@@ -1,15 +1,28 @@
 import * as React from 'react';
-import './{{template}}.less';
-
 import { withRouter } from 'react-router-dom'
+import { connect } from 'react-redux'
+import './{{template}}.styl';
 interface Props {
 
 }
 interface State {
 
 }
+const mapStateToProps = state => {
+  return {
 
-export default withRouter<any>(
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {}
+}
+
+@withRouter
+@connect(
+  mapStateToProps,
+  mapDispatchToProps
+)
   class {{ template }} extends React.Component < Props, State > {
     constructor(props: Props) {
       super(props);
@@ -53,5 +66,5 @@ export default withRouter<any>(
       );
     }
   }
-)
 
+export default {{template}}
