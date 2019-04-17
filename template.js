@@ -1,66 +1,66 @@
-import React from 'react';
+/**
+ * @author tangbin
+ * @date 2019/4/17-11:55
+ * @descriptions: {{descriptions}}
+ */
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import './{{template}}.styl';
+import './{{template}}.less';
 
-import {withRouter} from 'react-router-dom'
+/**
+ * @descriptions: {{descriptions}}
+ */
+class {{ template }} extends React.Component {
+	constructor(props) {
+		super(props);
+	}
 
-@withRouter
- class {{template}} extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      
-    };
-  }
-  static getDerivedStateFromProps(nextProps, prevState){
-    if (nextProps.currentRow !== prevState.lastRow) {
-      return {
-          isScrollingDown:
-          nextProps.currentRow > prevState.lastRow,
-          lastRow: nextProps.currentRow
-      }
-  }
-  return null
-  }
+	state = {
+
+	}
+
+	// 接收到新的props的检测
+  	static getDerivedStateFromProps(nextProps, prevState){
+		return null;
+	}
+
+	componentDidMount() { }
 
 
-  componentDidMount() { }
+	
+	shouldComponentUpdate(nextProps, nextState) {
+		return true;
+	}
+
+	// 在render之前调用，state已更新
+	getSnapshotBeforeUpdate(prevProps, prevState) {
+		// 如果 `props.list` 增加，将原来的 scrollHeight 存入 listRef
+		if (prevProps.list.length < this.props.list.length) {
+			return this.listRef.scrollHeight
+		}
+		return null
+	}
+
+	componentDidUpdate(prevProps, prevState, snapshot) { }
+
+	componentWillUnmount() { }
 
 
-  shouldComponentUpdate(nextProps, nextState) {
-    return true;
-  }
-  // 记忆上一次
-  getSnapshotBeforeUpdate(prevProps, prevState) {
-    // 如果 `props.list` 增加，将原来的 scrollHeight 存入 listRef
-    if (prevProps.list.length < this.props.list.length) {
-        return this.listRef.scrollHeight
-    }
-    return null
-} 
-// snapshot 快照
-
-  componentDidUpdate(prevProps, prevState,snapshot) { }
-
-  componentWillUnmount() { }
-
-
-  render() {
-    return (
-      <div className="{{template}}">
-
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div className="{{template}}">
+				我是{{ template }}页面
+			</div>
+		);
+	}
 }
 
-{{template}}.propTypes={
+{ { template } }.propTypes = {
 
 }
 
-{{template}}.defaultProps={
-  
+{ { template } }.defaultProps = {
+
 }
 
-export default {{template}}
-
+export default {{ template }}
