@@ -1,9 +1,9 @@
 /**
- * @author tangbin
- * @date 2019/4/17-11:55
+ * @author {{author}}
+ * @date {{date}}
  * @descriptions: {{descriptions}}
  */
-import { useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import './{{template}}.less';
 
@@ -55,11 +55,11 @@ class {{ template }} extends React.Component {
 	}
 }
 
-{ { template } }.propTypes = {
+{{ template }}.propTypes = {
 
 }
 
-{ { template } }.defaultProps = {
+{{ template }}.defaultProps = {
 
 }
 
