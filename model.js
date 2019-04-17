@@ -5,7 +5,7 @@
  */
 export default {
 
-    namespace: '{{template}}',
+    namespace: '{{namespace}}',
 
     state: {
         // 表格数据
@@ -20,7 +20,7 @@ export default {
         // 获取表格列表数据
         * getTableData({payload}, {call, put, select}) {
             // 获取列表配置
-            let tableConfig = yield select(state => state.{{template}}.tableConfig);
+            let tableConfig = yield select(state => state.{{namespace}}.tableConfig);
             // 判断是否跳转翻页
             if (payload.pagenum) {
                 // 修改配置
