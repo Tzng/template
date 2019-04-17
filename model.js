@@ -1,6 +1,6 @@
 /**
- * @author tangbin
- * @date 2019/4/17-11:58
+ * @author {{author}}
+ * @date {{date}}
  * @descriptions: {{descriptions}}的models
  */
 export default {
