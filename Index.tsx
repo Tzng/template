@@ -24,7 +24,7 @@ interface State {
 /**
  * @descriptions: {{descriptions}}
  */
-@inject({{namespace}})
+@inject('{{namespace}}')
 @observer
 class Index extends Component < Props, State > {
 
