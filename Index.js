@@ -13,7 +13,7 @@ import './{{template}}.less';
  */
 @connect(({ loading, {{namespace}} }) => ({
 	{{namespace}},
-	loading: loading.models.project,
+	loading: loading.models.{{namespace}},
 }))
 class Index extends React.Component {
 	constructor(props) {
