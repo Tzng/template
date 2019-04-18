@@ -5,7 +5,7 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import './{{template}}.less';
+import './Index.less';
 
 /**
  * @descriptions: {{descriptions}}
@@ -17,7 +17,7 @@ class Index extends React.Component {
 
 	state = {
 
-	}
+	};
 
 	// 接收到新的props的检测
   	static getDerivedStateFromProps(nextProps, prevState){
@@ -32,6 +32,14 @@ class Index extends React.Component {
 		return true;
 	}
 
+	componentDidUpdate(prevProps, prevState, snapshot) {
+
+	}
+
+	componentWillUnmount() {
+
+	}
+
 	// 在render之前调用，state已更新
 	getSnapshotBeforeUpdate(prevProps, prevState) {
 		// 如果 `props.list` 增加，将原来的 scrollHeight 存入 listRef
@@ -40,11 +48,6 @@ class Index extends React.Component {
 		}
 		return null
 	}
-
-	componentDidUpdate(prevProps, prevState, snapshot) { }
-
-	componentWillUnmount() { }
-
 
 	render() {
 		return (
