@@ -5,11 +5,16 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'dva';
 import './{{template}}.less';
 
 /**
  * @descriptions: {{descriptions}}
  */
+@connect(({ loading, {{namespace}} }) => ({
+	{{namespace}},
+	loading: loading.models.project,
+}))
 class Index extends React.Component {
 	constructor(props) {
 		super(props);
@@ -17,7 +22,7 @@ class Index extends React.Component {
 
 	state = {
 
-	}
+	};
 
 	// 接收到新的props的检测
   	static getDerivedStateFromProps(nextProps, prevState){
@@ -57,10 +62,10 @@ class Index extends React.Component {
 
 Index.propTypes = {
 
-}
+};
 
 Index.defaultProps = {
 
-}
+};
 
 export default Index
