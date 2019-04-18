@@ -15,7 +15,6 @@ import './{{template}}.less';
     {{{namespace}},
     loading: loading.models.{{namespace}},
 }))
-
 class Index extends React.Component {
     constructor(props) {
         super(props);
