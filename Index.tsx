@@ -5,7 +5,8 @@
  */
 import { ComponentType } from 'react';
 import Taro, { Component, Config } from '@tarojs/taro';
-import { View, Text } from '@tarojs/components'
+import { View, Text } from '@tarojs/components';
+import { observer, inject } from '@tarojs/mobx'
 import './Index.less';
 
 /**
@@ -23,6 +24,8 @@ interface State {
 /**
  * @descriptions: {{descriptions}}
  */
+@inject({{namespace}})
+@observer
 class Index extends Component < Props, State > {
 
   componentWillMount() { }
@@ -43,9 +46,9 @@ class Index extends Component < Props, State > {
   render() {
     const { counterStore: { counter } } = this.props;
     return (
-      <View className='{{template}}'>
-        <Text>欢迎来到{{template}}页面</Text>
-      </View>
+        <View className='{{template}}'>
+          <Text>欢迎来到{{template}}页面</Text>
+        </View>
     )
   }
 }
