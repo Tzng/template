@@ -10,7 +10,7 @@ import './{{template}}.less';
 /**
  * @descriptions: {{descriptions}}
  */
-class {{ template }} extends React.Component {
+class Index extends React.Component {
 	constructor(props) {
 		super(props);
 	}
@@ -55,12 +55,12 @@ class {{ template }} extends React.Component {
 	}
 }
 
-{{ template }}.propTypes = {
+Index.propTypes = {
 
 }
 
-{{ template }}.defaultProps = {
+Index.defaultProps = {
 
 }
 
-export default {{ template }}
+export default Index
