@@ -11,8 +11,8 @@ import './{{template}}.less';
 /**
  * @descriptions: {{descriptions}}
  */
-@connect(({  }) =>({
-
+@connect(({ {{namespace}} }) =>({
+    {{namespace}},
 }))
 class Index extends React.Component {
     constructor(props) {
