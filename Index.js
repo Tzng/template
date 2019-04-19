@@ -6,7 +6,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'dva';
-import './{{template}}.less';
+import './Index.less';
 
 /**
  * @descriptions: {{descriptions}}
